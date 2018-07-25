@@ -144,7 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 2}
+  enemy:
+    m_assetGUID: 548c56f4bcf4db24b8aa057e9846a005
+    m_cachedAsset: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 2}
   spawnTime: 15
   spawnPoints:
   - {fileID: 933997770}
@@ -160,7 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 2}
+  enemy:
+    m_assetGUID: ea3c2728ef33e3a4d99527a86cda6465
+    m_cachedAsset: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 1725468539}
@@ -176,7 +180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
-  enemy: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 2}
+  enemy:
+    m_assetGUID: e5171f72421770240bd7c3989fe351e3
+    m_cachedAsset: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 2}
   spawnTime: 3
   spawnPoints:
   - {fileID: 345275349}
