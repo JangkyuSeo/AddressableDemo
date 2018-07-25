@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement;
 using UnityEngine.SceneManagement;
 
 namespace CompleteProject
@@ -11,7 +13,8 @@ namespace CompleteProject
         public int currentHealth;                                   // The current health the player has.
         public Slider healthSlider;                                 // Reference to the UI's health bar.
         public Image damageImage;                                   // Reference to an image to flash on the screen on being hurt.
-        public AudioClip deathClip;                                 // The audio clip to play when the player dies.
+        [AssetReferenceTypeRestriction(typeof(AudioClip))]
+        public AssetReference deathClip;                            // The audio clip to play when the player dies.
         public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
         public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
 
@@ -92,9 +95,11 @@ namespace CompleteProject
             anim.SetTrigger ("Die");
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
-            playerAudio.clip = deathClip;
-            playerAudio.Play ();
-
+            deathClip.LoadAsset<AudioClip>().Completed += operation =>
+            {
+                playerAudio.clip = operation.Result;
+                playerAudio.Play();
+            };         
             // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
             playerShooting.enabled = false;
