@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9, type: 3}
+  m_Name: AddressableAssetSettings
+  m_EditorClassIdentifier: 
+  m_defaultGroup: ea19605defb9342b9863258e8a2bbef0
+  m_groups:
+  - m_name: Built In Data
+    m_data:
+      m_serializedData: []
+    m_guid: b9551812959a74622af5ed0e4343fb48
+    m_processorAssembly: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_processorClass: UnityEditor.AddressableAssets.PlayerDataAssetGroupProcessor
+    m_serializeEntries:
+    - m_guid: EditorSceneList
+      m_address: EditorSceneList
+      m_readOnly: 1
+      m_serializedLabels: []
+    - m_guid: Resources
+      m_address: Resources
+      m_readOnly: 1
+      m_serializedLabels: []
+    m_readOnly: 1
+  - m_name: Default Local Group
+    m_data:
+      m_serializedData:
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: c79a25ae6528346ebbf48bbe75ff3ea5
+        m_key: BuildPath
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: b2ba6a8ae3bca4a279f4d72c75844047
+        m_key: LoadPath
+      - m_assemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        m_className: UnityEditor.AddressableAssets.BundledAssetGroupProcessor+BundleMode
+        m_data: PackTogether
+        m_key: BundleMode
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.Int32
+        m_data: 0
+        m_key: Priority
+    m_guid: ea19605defb9342b9863258e8a2bbef0
+    m_processorAssembly: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_processorClass: UnityEditor.AddressableAssets.BundledAssetGroupProcessor
+    m_serializeEntries:
+    - m_guid: 02e6208ec76314158a9f548f51fe9f11
+      m_address: ZomBunny Hurt
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: 1d3bfb9269f136947bf8ac164cace1ff
+      m_address: ZomBunny Death
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: 1d4840678e677424b8921716c72397ea
+      m_address: ZomBear Hurt
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: 548c56f4bcf4db24b8aa057e9846a005
+      m_address: Hellephant
+      m_readOnly: 0
+      m_serializedLabels:
+      - Enemy
+    - m_guid: 62366b8d2c37a49dca550841c741317f
+      m_address: ZomBear Death
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: 8c615fd0429f34edf85539d70279360d
+      m_address: Hellephant Death
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: 9922a12f34d0a084aab32de985459723
+      m_address: Player Hurt
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: d36a393bca4582043982db9089e1694f
+      m_address: Player Death
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: e5171f72421770240bd7c3989fe351e3
+      m_address: ZomBunny
+      m_readOnly: 0
+      m_serializedLabels:
+      - Enemy
+    - m_guid: ea3c2728ef33e3a4d99527a86cda6465
+      m_address: ZomBear
+      m_readOnly: 0
+      m_serializedLabels:
+      - Enemy
+    - m_guid: fa7f046ce321d4021b5e753bf1152916
+      m_address: Player GunShot
+      m_readOnly: 0
+      m_serializedLabels: []
+    - m_guid: fce027b40770a44298a6f5a4233bfb04
+      m_address: Hellephant Hurt
+      m_readOnly: 0
+      m_serializedLabels: []
+    m_readOnly: 0
+  - m_name: AudioClip
+    m_data:
+      m_serializedData:
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: c79a25ae6528346ebbf48bbe75ff3ea5
+        m_key: BuildPath
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.String
+        m_data: b2ba6a8ae3bca4a279f4d72c75844047
+        m_key: LoadPath
+      - m_assemblyName: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        m_className: UnityEditor.AddressableAssets.BundledAssetGroupProcessor+BundleMode
+        m_data: PackTogether
+        m_key: BundleMode
+      - m_assemblyName: mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+        m_className: System.Int32
+        m_data: 0
+        m_key: Priority
+    m_guid: d99cf23985b6c465599b21ba13ce7ba7
+    m_processorAssembly: Unity.Addressables.Editor, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    m_processorClass: UnityEditor.AddressableAssets.BundledAssetGroupProcessor
+    m_serializeEntries: []
+    m_readOnly: 0
+  m_buildSettings:
+    m_compression:
+      compression: 3
+      level: 5
+      blockSize: 131072
+    m_compileScriptsInVirtualMode: 0
+    m_bundleBuildPath: Temp/AddressableAssetsBundles
+  m_profileSettings:
+    m_profiles:
+    - m_inheritedParent: 
+      m_id: 47c8fa3ec860a4ebdb7906ab483a4292
+      m_profileName: Default
+      m_values:
+      - m_id: 22c72964f374a4eb89b5a4282a855ee0
+        m_value: 1
+      - m_id: 75f45bcee86b94d458a8b6c4037366b7
+        m_value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_id: c79a25ae6528346ebbf48bbe75ff3ea5
+        m_value: Assets/StreamingAssets/com.unity.addressables/[BuildTarget]
+      - m_id: b2ba6a8ae3bca4a279f4d72c75844047
+        m_value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_id: 5774fa7aaeacf4acf830e17a714baab0
+        m_value: ServerData/[BuildTarget]
+      - m_id: 4165b22b281554ac78916e24bd9c2398
+        m_value: http://localhost/[BuildTarget]
+    m_profileEntryNames:
+    - m_id: 485c553a0d00740769d9a5b6049a0113
+      m_name: <custom>
+      m_inlineUsage: 1
+    - m_id: 22c72964f374a4eb89b5a4282a855ee0
+      m_name: ContentVersion
+      m_inlineUsage: 0
+    - m_id: 75f45bcee86b94d458a8b6c4037366b7
+      m_name: BuildTarget
+      m_inlineUsage: 0
+    - m_id: c79a25ae6528346ebbf48bbe75ff3ea5
+      m_name: LocalBuildPath
+      m_inlineUsage: 0
+    - m_id: b2ba6a8ae3bca4a279f4d72c75844047
+      m_name: LocalLoadPath
+      m_inlineUsage: 0
+    - m_id: 5774fa7aaeacf4acf830e17a714baab0
+      m_name: RemoteBuildPath
+      m_inlineUsage: 0
+    - m_id: 4165b22b281554ac78916e24bd9c2398
+      m_name: RemoteLoadPath
+      m_inlineUsage: 0
+  m_labelTable:
+    m_labelNames:
+    - Enemy
+  m_activeProfileId: 47c8fa3ec860a4ebdb7906ab483a4292
