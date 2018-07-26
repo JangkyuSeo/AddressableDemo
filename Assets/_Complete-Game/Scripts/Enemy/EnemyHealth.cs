@@ -20,6 +20,7 @@ namespace CompleteProject
         bool isDead;                                // Whether the enemy is dead.
         bool isSinking;                             // Whether the enemy has started sinking through the floor.
 
+        AudioClip loadedDepthClip;
 
         void Awake ()
         {
@@ -29,10 +30,19 @@ namespace CompleteProject
             hitParticles = GetComponentInChildren <ParticleSystem> ();
             capsuleCollider = GetComponent <CapsuleCollider> ();
 
+            deathClip.LoadAsset<AudioClip>().Completed += operation =>
+            {
+                loadedDepthClip = operation.Result;
+            };
+            
             // Setting the current health when the enemy first spawns.
             currentHealth = startingHealth;
         }
 
+        void OnDestroy()
+        {
+            deathClip.ReleaseAsset(loadedDepthClip);
+        }
 
         void Update ()
         {
@@ -85,12 +95,11 @@ namespace CompleteProject
             anim.SetTrigger ("Dead");
 
             // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
-            deathClip.LoadAsset<AudioClip>().Completed += operation =>
+            if (loadedDepthClip != null)
             {
-                enemyAudio.clip = operation.Result;
-                enemyAudio.Play ();
-            };
-            
+                enemyAudio.clip = loadedDepthClip;
+                enemyAudio.Play();
+            }
         }
 
 

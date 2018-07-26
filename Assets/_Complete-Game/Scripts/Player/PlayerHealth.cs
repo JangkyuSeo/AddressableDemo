@@ -26,6 +26,8 @@ namespace CompleteProject
         bool isDead;                                                // Whether the player is dead.
         bool damaged;                                               // True when the player gets damaged.
 
+        AudioClip loadedDeathClip;
+
 
         void Awake ()
         {
@@ -37,8 +39,18 @@ namespace CompleteProject
 
             // Set the initial health of the player.
             currentHealth = startingHealth;
+            
+            deathClip.LoadAsset<AudioClip>().Completed += operation =>
+            {
+                loadedDeathClip = operation.Result;
+            };
+            
         }
 
+        void OnDestroy()
+        {
+            deathClip.ReleaseAsset(loadedDeathClip);
+        }
 
         void Update ()
         {
@@ -95,11 +107,12 @@ namespace CompleteProject
             anim.SetTrigger ("Die");
 
             // Set the audiosource to play the death clip and play it (this will stop the hurt sound from playing).
-            deathClip.LoadAsset<AudioClip>().Completed += operation =>
+            if (loadedDeathClip != null)
             {
-                playerAudio.clip = operation.Result;
+                playerAudio.clip = loadedDeathClip;
                 playerAudio.Play();
-            };         
+            }
+
             // Turn off the movement and shooting scripts.
             playerMovement.enabled = false;
             playerShooting.enabled = false;
